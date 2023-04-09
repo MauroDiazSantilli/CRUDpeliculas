@@ -80,7 +80,125 @@
     </header>
     <main class="container my-5">
       <h1 class="display-4 text-center">Lista de peliculas</h1>
-      <hr />
+      <hr/>
+      <p>Opciones: <button class="btn btn-outline-primary ms-2"><i class="bi bi-nut-fill"></i></button> </p>
+      <section class="container-fluid mt-5">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>The Super Mario Bros. Movie</td>
+                <td>Pelicula de animacion...</td>
+                <td>https://pics.filmaffinity...</td>
+                <td>Aventura</td>
+                <td>
+                  <button class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#editarForm"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarForm"><i class="bi bi-x-square"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Jacob Barroso</td>
+                <td>7i</td>
+                <td>Presentado</td>
+                <td>Restaurant</td>
+                <td>11 de mayo a las 22:00</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Jacob Barroso</td>
+                <td>7i</td>
+                <td>Presentado</td>
+                <td>Restaurant</td>
+                <td>11 de mayo a las 22:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal fade" id="editarForm" tabindex="-1" aria-labelledby="modalEditar" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalEditar">Administrar serie</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="codigo" class="form-label">Codigo</label>
+                    <input type="text" class="form-control" id="codigo" placeholder="123" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label for="tituloPelicula" class="form-label">Titulo*</label>
+                    <input type="text" class="form-control" id="tituloPelicula" placeholder="Ej: Blade Runner" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="descripcionPelicula" class="form-label">Descripcion*</label>
+                    <textarea class="form-control" id="descripcionPelicula" rows="3" minlength="100"
+                    maxlength="400" required></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="imagenPelicula" class="form-label">Imagen*</label>
+                    <input type="text" class="form-control" id="imagenPelicula" placeholder="https://pics.filmaffinity.com/blade_runner-351607743-large.jpg">
+                  </div>
+                  <div class="mb-3">
+                    <label for="generoPelicula" class="form-label">Genero*</label>
+                    <input type="text" class="form-control" id="generoPelicula" placeholder="Ciencia Ficcion">
+                  </div>
+                  <div class="mb-3">
+                    <label for="anioPelicula" class="form-label">Año</label>
+                    <input type="text" class="form-control" id="anioPelicula" placeholder="1982">
+                  </div>
+                  <div class="mb-3">
+                    <label for="duracionPelicula" class="form-label">Duracion (en minutos)</label>
+                    <input type="text" class="form-control" id="duracionPelicula" placeholder="180 min">
+                  </div>
+                  <div class="mb-3">
+                    <label for="paisPelicula" class="form-label">Pais</label>
+                    <input type="text" class="form-control" id="paisPelicula" placeholder="Ej: Argentina">
+                  </div>
+                  <div class="mb-3">
+                    <label for="repartoPelicula" class="form-label">Reparto (cada actor/actriz por separado)</label>
+                    <input type="text" class="form-control" id="repartoPelicula" placeholder="Ej: Chris Pratt, Anya Taylor-Joy, Charlie Day, Jack Black, etc.">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal fade" id="eliminarForm" tabindex="-1" aria-labelledby="modalEliminar" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalEliminar">Eliminar información</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Está seguro que desea eliminar esta información?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Eliminar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>  
+              </div>
+            </div>
+          </div>
+        </div>   
+      </section>
     </main>
     <footer class="bg-dark text-light text-center py-4">
       <p>&copy; Todos los derechos reservados</p>
