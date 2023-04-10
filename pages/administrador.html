@@ -81,51 +81,60 @@
     <main class="container my-5">
       <h1 class="display-4 text-center">Lista de peliculas</h1>
       <hr/>
-      <p>Opciones: <button class="btn btn-outline-primary ms-2"><i class="bi bi-nut-fill"></i></button> </p>
-      <section class="container-fluid mt-5">
-        <div class="table-responsive">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Genero</th>
-                <th scope="col">Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>The Super Mario Bros. Movie</td>
-                <td>Pelicula de animacion...</td>
-                <td>https://pics.filmaffinity...</td>
-                <td>Aventura</td>
-                <td>
-                  <button class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#editarForm"><i class="bi bi-pencil-square"></i></button>
-                  <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarForm"><i class="bi bi-x-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <p>Opciones: <button class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#editarForm"><i class="bi bi-nut-fill"></i></button> </p>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Imagen</th>
+            <th>Genero</th>
+            <th>Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>The Super Mario Bros Movie</td>
+              <td class="text-truncate">Pelicula de animación basada en la franquicia de videojuegos Super Mario Bros, de Nintendo. Está producida por Shigeru Miyamoto, creador de la licencia, y la producirá y animará Illumination Entertainment</td>
+              <td class="text-truncate">https://pics.filmaffinity.com/the_super_mario_bros_movie-521125124-large.jpg</td>
+              <td>Aventura</td>
+              <td><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarForm"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarForm"><i class="bi bi-x-square"></i></button></td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>AIR</td>
+              <td class="text-truncate">Narra la increíble y revolucionaria asociación entre Michael Jordan -un novato en ese momento- y la incipiente sección de baloncesto de Nike que revolucionó el mundo del deporte y la cultura contemporánea con la marca Air Jordan. Cuenta la atrevida apuesta que definió la carrera de un equipo poco convencional, la visión implacable de una madre que conoce el valor del inmenso talento de su hijo y el fenómeno del baloncesto que se convertiría en el más grande de todos los tiempos.</td>
+              <td class="text-truncate">https://pics.filmaffinity.com/air-500673673-large.jpg</td>
+              <td>Drama | Biográfico</td>
+              <td><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarForm"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarForm"><i class="bi bi-x-square"></i></button></td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>The Pope's Exorcist</td>
+              <td class="text-truncate">Película sobre Gabriele Amorth, un sacerdote que ejerció como exorcista principal del Vaticano, realizando más de cien mil exorcismos a lo largo de su vida. Amorth escribió dos libros de memorias donde detalló sus experiencias luchando contra Satanás.</td>
+              <td class="text-truncate">https://pics.filmaffinity.com/the_pope_s_exorcist-660382735-large.jpg</td>
+              <td>Terror</td>
+              <td><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarForm"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarForm"><i class="bi bi-x-square"></i></button></td>
+            </tr>
+            <tr>
+              <th>4</th>
+              <td>John Wick: Chapter 4</td>
+              <td class="text-truncate">John Wick, legendario asesino retirado, vuelve de nuevo a la acción impulsado por una incontrolable búsqueda de venganza. Al tener que luchar contra asesinos sedientos de sangre que le persiguen, John tendrá que llevar sus habilidades al límite si quiere salir esta vez con vida.</td>
+              <td class="text-truncate">https://pics.filmaffinity.com/john_wick_chapter_4-101402041-large.jpg</td>
+              <td>Accion</td>
+              <td><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarForm"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarForm"><i class="bi bi-x-square"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </section>
         <div class="modal fade" id="editarForm" tabindex="-1" aria-labelledby="modalEditar" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -185,11 +194,11 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="modalEliminar">Eliminar información</h5>
+                <h5 class="modal-title" id="modalEliminar">Eliminar pelicula</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
               </div>
               <div class="modal-body">
-                <p>Está seguro que desea eliminar esta información?</p>
+                <p>Está seguro que desea eliminar esta pelicula?</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger">Eliminar</button>
