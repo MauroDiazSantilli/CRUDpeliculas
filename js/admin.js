@@ -1,11 +1,35 @@
-import Pelicula from "./classPelicula.js"
+import Pelicula from "./classPelicula.js";
 
-const btnEditar = document.querySelector('#btnEditar')
-btnEditar.addEventListener('click', crearPelicula)
+const btnEditar = document.querySelector('#btnEditar');
+const btnAgregar = document.querySelector('#btnAgregar');
+const formularioPelicula = document.getElementById('formAdministrarPelicula');
 
-// crear nueva pelicula
+btnEditar.addEventListener('click', crearPeli);
+btnAgregar.addEventListener('click', mostrarModalPeli);
+formularioPelicula.addEventListener('submit', cargarPelicula);
 
-let nuevaPelicula = new Pelicula('Super Mario', 'algo', 'url', 'aventura', 2023, '2hs', 'EEUU', '-')
-console.log(nuevaPelicula)
+const modalPelicula = new bootstrap.Modal(document.querySelector('#modalAgregar'));
+
+function crearPeli(){
+// crear una nueva peli
+let nuevaPeli = new Pelicula('Super mario','algo','url','aventura',2023, '2hs','EEUU','-');
+console.log(nuevaPeli)
+
+}
+
+function mostrarModalPeli(){
+    //abrir la ventana modal
+    modalPelicula.show();
+    console.log('aqui vamos a crear una peli')
+}
+
+function cargarPelicula(e){
+    e.preventDefault();
+    console.log('creando la pelicula...')
+    //crear modal
+    modalPelicula.hide();
+}
+
+// tarea agregar validaciones HTML
 
 

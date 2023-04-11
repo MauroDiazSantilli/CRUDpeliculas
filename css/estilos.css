@@ -15,3 +15,12 @@ textarea{
   .table{
     table-layout: fixed;
   }
+
+  @media (max-width: 767px) {
+    /* Dispositivos chicos */
+    .table-sm th,
+    .table-sm td {
+      padding: 0.5rem; /* Aumento el espacio entre columnas */
+      font-size: 12px; /* Juego con el tamaño de la fuente */
+    }
+  }

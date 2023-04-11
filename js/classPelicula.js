@@ -1,29 +1,27 @@
 export default class Pelicula{
-    #codigo
-    #titulo
-    #descripcion
-    #imagen
-    #genero
-    #anio
-    #duracion
-    #pais
-    #reparto
-    #estado
+    #codigo;
+    #titulo;
+    #descripcion;
+    #imagen;
+    #genero;
+    #anio;
+    #duracion;
+    #pais;
+    #reparto;
+    #estado;
     constructor(titulo, descripcion, imagen, genero, anio, duracion, pais, reparto){
-        this.#codigo = 0
-        this.#titulo = titulo
-        this.#descripcion = descripcion
-        this.#imagen = imagen
-        this.#genero = genero
-        this.#anio = anio
-        this.#duracion = duracion
-        this.#pais = pais
-        this.#reparto = reparto
-        this.#estado = false
-
+        this.#codigo = 0;
+        this.#titulo = titulo;
+        this.#descripcion = descripcion;
+        this.#imagen = imagen;
+        this.#genero = genero;
+        this.#anio = anio;
+        this.#duracion = duracion;
+        this.#pais = pais;
+        this.#reparto = reparto;
+        this.#estado = false;
     }
-
-    //crear los getters y setters
+    // crear los getters y setters
     // getters
     getCodigo() {
         return this.#codigo;
@@ -88,4 +86,3 @@ export default class Pelicula{
         this.#estado = estado;
     }
 }
-
