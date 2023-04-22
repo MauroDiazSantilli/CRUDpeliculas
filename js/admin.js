@@ -18,6 +18,21 @@ const modalPelicula = new bootstrap.Modal(
 );
 const formularioPelicula = document.getElementById("formAdministrarPelicula");
 
+//Contar cuantos caracteres estan siendo usados
+const cuadroDescripcion = document.getElementById("descripcion")
+const cuentaCaracteres = document.getElementById("cuentaCaracteres")
+
+cuadroDescripcion.addEventListener("input", () => {
+  const caracteresUsados = cuadroDescripcion.value.length
+  cuentaCaracteres.innerText = `${caracteresUsados}/200`
+
+  //Condicional para que el usuario no use mas de 200 caracteres
+if(caracteresUsados > 200){
+  cuadroDescripcion.value = cuadroDescripcion.value.slice(1, 200)
+}
+})
+
+
 //manejadores de eventos
 // btnEditar.addEventListener('click', crearPeli);
 btnAgregar.addEventListener("click", mostrarModalPeli);
