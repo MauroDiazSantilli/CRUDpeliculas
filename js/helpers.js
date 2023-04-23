@@ -58,7 +58,7 @@ export function sumarioValidaciones(titulo, descripcion, imagen, duracion, gener
     if(!cantidadCaracteres(titulo, 3, 100)){
         resumen += 'Corregir el campo del titulo debe contener entre 3 y 100 caracteres <br>';
     }
-    if(!cantidadCaracteres(descripcion, 3, 100)){
+    if(!cantidadCaracteres(descripcion, 3, 500)){
         resumen += 'Corregir la cantidad de caracteres de la descripcion <br>'
     }
     if(!validarURLImagen(imagen)){

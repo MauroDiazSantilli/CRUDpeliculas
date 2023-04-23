@@ -24,11 +24,11 @@ const cuentaCaracteres = document.getElementById("cuentaCaracteres")
 
 cuadroDescripcion.addEventListener("input", () => {
   const caracteresUsados = cuadroDescripcion.value.length
-  cuentaCaracteres.innerText = `${caracteresUsados}/200`
+  cuentaCaracteres.innerText = `${caracteresUsados}/500`
 
-  //Condicional para que el usuario no use mas de 200 caracteres
-if(caracteresUsados > 200){
-  cuadroDescripcion.value = cuadroDescripcion.value.slice(1, 200)
+  //Condicional para que el usuario no use mas de 500 caracteres
+if(caracteresUsados > 500){
+  cuadroDescripcion.value = cuadroDescripcion.value.slice(1, 500)
 }
 })
 
@@ -151,12 +151,17 @@ function cargarPelicula(e) {
     crearFila(nuevaPeli, indicePeli);
     //mostrar un cartel al usuario
 
+    //Metodo Swal para que la ventana se cierre una vez se crea la pelicula
     Swal.fire("Pelicula creada", "La pelicula ingresada fue creada correctamente", "success");
+    
     // Tarea verificar cantidad de caracteres en el campo de la descripcion
     // ocultar pasado x tiempo o una vez enviado la pelicula el alert con los errores.
   } else {
     msjFormulario.className = "alert alert-danger mt-3";
     msjFormulario.innerHTML = sumario;
+    setTimeout(function(){
+      msjFormulario.style.display = "none"
+    }, 6000)
   }
 }
 
