@@ -112,8 +112,19 @@ function mostrarModalPeli() {
   console.log("aqui vamos a crear una peli");
 }
 
+//Funcion para que se repita el mensaje de error cada vez que enviamos datos incorrectos
+
+function limpiezaError(){
+  msjFormulario.innerHTML = ""
+  msjFormulario.style.display = "block"
+}
+
 function cargarPelicula(e) {
   e.preventDefault();
+
+  //Limpiar mensajes de error antes de validar datos
+  limpiezaError()
+
   //validar los datos
   let sumario = sumarioValidaciones(
     titulo.value,
@@ -153,7 +164,7 @@ function cargarPelicula(e) {
 
     //Metodo Swal para que la ventana se cierre una vez se crea la pelicula
     Swal.fire("Pelicula creada", "La pelicula ingresada fue creada correctamente", "success");
-    
+
     // Tarea verificar cantidad de caracteres en el campo de la descripcion
     // ocultar pasado x tiempo o una vez enviado la pelicula el alert con los errores.
   } else {
@@ -164,6 +175,8 @@ function cargarPelicula(e) {
     }, 6000)
   }
 }
+//Event listener al botón de enviar para llamar la función de limpiar los mensajes de error
+enviarBtn.addEventListener("click", limpiezaError)
 
 function guardarEnLocalStorage() {
   localStorage.setItem("listaPeliculas", JSON.stringify(listaPeliculas)); //para objetos Publicos funciona
