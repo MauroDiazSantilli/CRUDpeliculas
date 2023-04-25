@@ -1,11 +1,11 @@
 import Pelicula from "./classPelicula.js";
 let listaPeliculas = localStorage.getItem('listaPeliculas');
 if(!listaPeliculas){
-    //si lista peliculas no existe en Localstorage
+    //En caso de que lista peliculas no exista en el Localstorage
     listaPeliculas = [];
 }
 else{
-    //si lista peliculas tiene datos, quiero transformarlo en un array de objetos pelicula
+    //si lista peliculas tiene datos, se lo transforma en un array de objetos pelicula
     listaPeliculas = JSON.parse(listaPeliculas).map( (pelicula)=> new Pelicula(pelicula.titulo,pelicula.descripcion, pelicula.imagen, pelicula.genero, pelicula.anio,pelicula.duracion, pelicula.pais, pelicula.reparto));
 }
 
@@ -15,10 +15,10 @@ cargaInicial();
 function cargaInicial(){
     //verificar si listaPeliculas tiene datos
     if(listaPeliculas.length > 0){
-        //dibujes los datos en la tabla
+        //dibuja los datos en la tabla
         listaPeliculas.map((pelicula, indice) => crearCard(pelicula,indice))
     }
-    //else seria mostrar un mensaje que no hay datos para cargar o dejo la tabla vacia
+    //else mostrar un mensaje que no hay datos para cargar o dejo la tabla vacia
 }
 
 function crearCard(pelicula){
