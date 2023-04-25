@@ -9,7 +9,7 @@ export default class Pelicula{
     #pais;
     #reparto;
     #estado;
-    constructor(titulo, descripcion, imagen, genero, anio, duracion, pais, reparto){
+    constructor(titulo, descripcion, imagen, genero, anio, duracion, pais,reparto){
         this.#codigo = uuidv4();
         this.#titulo = titulo;
         this.#descripcion = descripcion;
@@ -55,37 +55,37 @@ export default class Pelicula{
     }
     
     // setters
-    set codigo(codigo) {
-        this.#codigo = codigo;
+    set codigo(newCodigo) {
+        this.#codigo = newCodigo;
     }
-    set titulo(titulo) {
-        this.#titulo = titulo;
+    set titulo(newTitulo) {
+        this.#titulo = newTitulo;
     }
-    set descripcion(descripcion) {
-        this.#descripcion = descripcion;
+    set descripcion(newDescripcion) {
+        this.#descripcion = newDescripcion;
     }
-    set imagen(imagen) {
-        this.#imagen = imagen;
+    set imagen(newImagen) {
+        this.#imagen = newImagen;
     }
-    set genero(genero) {
-        this.#genero = genero;
+    set genero(newGenero) {
+        this.#genero = newGenero;
     }
-    set anio(anio) {
-        this.#anio = anio;
+    set anio(newAnio) {
+        this.#anio = newAnio;
     }
-    set duracion(duracion) {
-        this.#duracion = duracion;
+    set duracion(newDuracion) {
+        this.#duracion = newDuracion;
     }
-    set pais(pais) {
-        this.#pais = pais;
+    set pais(newPais) {
+        this.#pais = newPais;
     }
-    set reparto(reparto) {
-        this.#reparto = reparto;
+    set reparto(newReparto) {
+        this.#reparto = newReparto;
     }
-    set estado(estado) {
-        this.#estado = estado;
+    set estado(newEstado) {
+        this.#estado = newEstado;
     }
-    //stringify accede a este medoto
+    //stringify accede a este metodo
     toJSON(){
         return {
             codigo: this.codigo,
@@ -93,10 +93,10 @@ export default class Pelicula{
             descripcion: this.descripcion,
             imagen: this.imagen,
             genero: this.genero,
+            anio: this.anio,
             duracion: this.duracion,
             pais: this.pais,
-            reparto: this.reparto,
-            estado: this.estado
+            reparto: this.reparto
         }
     }
 }

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Practica" />
-    <meta name="author" content="Mauro Diaz Santilli" />
-    <meta name="keywords" content="Peliculas, pagina, series" />
+    <meta name="author" content="Julian Martin" />
+    <meta name="description" content="Pagina web de peliculas" />
+    <meta name="keywords" content="web, peliculas" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,13 +17,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="../css/estilos.css" />
-    <script src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
-"></script>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
     <title>Peliculas</title>
   </head>
-  <body data-bs-theme="dark">
+  <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
@@ -47,7 +45,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="admin.html"
+                <a class="nav-link active" href="administrador.html"
                   >Administrador</a
                 >
               </li>
@@ -63,18 +61,15 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
                 <ul class="dropdown-menu">
                   <li>
                     <button class="dropdown-item" id="btnThemeLight">
-                      <i class="bi bi-brightness-high-fill"></i> Light
+                      <i class="bi bi-brightness-high-fill"></i> Light 
                     </button>
                   </li>
-                  <li>
-                    <button class="dropdown-item" id="btnThemeDark">
-                      <i class="bi bi-moon-stars-fill"></i> Dark
-                    </button>
-                  </li>
+                  <li><button class="dropdown-item" id="btnThemeDark"><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <button class="nav-link">Logout</button>
+                <button class="nav-link"
+                >Logout</button>
               </li>
             </ul>
           </div>
@@ -88,10 +83,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
         <p>Opciones: <button class="btn btn-outline-primary" id="btnAgregar"><i class="bi bi-clipboard-plus-fill"></i></button></p>
       </section>
       <section class="my-5">
-        <h2 class="display-6 text-center">Lista de Peliculas</h2>
+        <h2 class="display-6">Lista de Peliculas</h2>
         <hr>
         <div class="table-responsive">
-        <table class="table table-striped table-sm">
+        <table class="table table-striped">
           <thead>
             <tr>
             <th>#</th>
@@ -103,127 +98,39 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
           </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>1</th>
-              <td>The Super Mario Bros Movie</td>
-              <td class="text-truncate">Pelicula de animación basada en la franquicia de videojuegos Super Mario Bros, de Nintendo. Está producida por Shigeru Miyamoto, creador de la licencia, y la producirá y animará Illumination Entertainment</td>
-              <td class="text-truncate">https://pics.filmaffinity.com/the_super_mario_bros_movie-521125124-large.jpg</td>
-              <td>Aventura</td>
-              <td><button class="bi bi-pencil-square btn btn-warning" id="btnEditar"></button> <button class="bi bi-x-square btn btn-danger"></button></td>
-            </tr>
-            <tr>
-              <th>2</th>
-              <td>AIR</td>
-              <td class="text-truncate">Narra la increíble y revolucionaria asociación entre Michael Jordan -un novato en ese momento- y la incipiente sección de baloncesto de Nike que revolucionó el mundo del deporte y la cultura contemporánea con la marca Air Jordan. Cuenta la atrevida apuesta que definió la carrera de un equipo poco convencional, la visión implacable de una madre que conoce el valor del inmenso talento de su hijo y el fenómeno del baloncesto que se convertiría en el más grande de todos los tiempos.</td>
-              <td class="text-truncate">https://pics.filmaffinity.com/air-500673673-large.jpg</td>
-              <td>Drama | Biográfico</td>
-              <td><button class="bi bi-pencil-square btn btn-warning"></button> <button class="bi bi-x-square btn btn-danger"></button></td>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td>Blade Runner</td>
-              <td class="text-truncate">Al final del siglo XX, miles de hombres y mujeres dejaron la Tierra para conquistar el espacio y escapar de las grandes ciudades, que se habían vuelto inhabitables. En las colonias nació una nueva raza de esclavos androides llamados "Replicantes". Los nuevos androides son parecidos al hombre, pero superiores en fuerza y agilidad. Después de una revolución, el antiguo policía Rick Deckard debe encontrar y eliminar a los replicantes rebeldes.</td>
-              <td class="text-truncate">https://pics.filmaffinity.com/blade_runner-351607743-large.jpg</td>
-              <td>Ciencia Ficcion</td>
-              <td><button class="bi bi-pencil-square btn btn-warning"></button> <button class="bi bi-x-square btn btn-danger"></button></td>
-            </tr>
-            <tr>
-              <th>4</th>
-              <td>Kill Bill, la venganza: Volumen I</td>
-              <td class="text-truncate">El día de su boda, una asesina profesional (Thurman) sufre el ataque de algunos miembros de su propia banda, que obedecen las órdenes de Bill (David Carradine), el jefe de la organización criminal. Logra sobrevivir al ataque, aunque queda en coma. Cuatro años después despierta dominada por un gran deseo de venganza.</td>
-              <td class="text-truncate">https://pics.filmaffinity.com/kill_bill_volume_1-216872360-large.jpg</td>
-              <td>Accion</td>
-              <td><button class="bi bi-pencil-square btn btn-warning"></button> <button class="bi bi-x-square btn btn-danger"></button></td>
-            </tr>
-            <tr>
-              <th>5</th>
-              <td>Relatos salvajes</td>
-              <td class="text-truncate">La película consta de seis episodios que alternan la intriga, la comedia y la violencia. Sus personajes se verán empujados hacia el abismo y hacia el innegable placer de perder el control, cruzando la delgada línea que separa la civilización de la barbarie.</td>
-              <td class="text-truncate">https://pics.filmaffinity.com/relatos_salvajes-102488639-large.jpg</td>
-              <td>Comedia, Drama</td>
-              <td><button class="bi bi-pencil-square btn btn-warning"></button> <button class="bi bi-x-square btn btn-danger"></button></td>
-            </tr>
           </tbody>
         </table>
       </div>
       </section>
-      <section
-      class="modal fade"
-      id="modalAgregar"
-      tabindex="-1"
-      aria-labelledby="agregarModalLabel"
-      aria-hidden="true"
-    >
+    <section class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
       <article class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="agregarModalLabel">
-              Administrar Serie
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <h1 class="modal-title fs-5" id="agregarModalLabel">Administrar Serie</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form id="formAdministrarPelicula">
               <div class="mb-3">
-                <label for="recipient-name" class="col-form-label"
-                  >Código</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="codigo"
-                  placeholder="123"
-                  disabled
-                />
+                <label for="recipient-name" class="col-form-label">Código</label>
+                <input type="text" class="form-control" id="codigo" placeholder="123" disabled>
               </div>
               <div class="mb-3">
                 <label class="col-form-label">Titulo *</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="titulo"
-                  required
-                  placeholder="Ej: Robotech"
-                />
+                <input type="text" class="form-control" id="titulo"  required placeholder="Ej: Robotech">
               </div>
               <div class="mb-3">
                 <label class="col-form-label">Descripcion *</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="descripcion"
-                  required
-                  placeholder="Ej: Lorem ipsum dolor sit amet"
-                />
-                <span class="text-muted" id="cuentaCaracteres">0/500</span>
+                <textarea type="text" class="form-control" id="descripcion"  required placeholder="Ej: Lorem ipsum dolor sit amet" rows="3" cols="3"></textarea>
+                <span id="contadorcaracter">500/500</span>
               </div>
               <div class="mb-3">
-                <label class="col-form-label"
-                  >Imagen *<small class="text-muted">
-                    (URL con extension .png, .jpg o .gif)</small
-                  ></label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="imagen"
-                  required
-                  placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html"
-                />
+                <label class="col-form-label">Imagen *</label>
+                <input type="text" class="form-control" id="imagen" required placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html">
               </div>
               <div class="mb-3">
                 <label class="col-form-label">Genero *</label>
-                <select
-                  class="form-select"
-                  aria-label="Elegir Genero"
-                  id="genero"
-                  required
-                >
+                <select class="form-select" aria-label="Elegir Genero" required id="genero">
                   <option selected value="">Seleccione una opcion</option>
                   <option value="Aventura">Aventura</option>
                   <option value="Accion">Accion</option>
@@ -233,71 +140,42 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
               </div>
               <div class="mb-3">
                 <label class="col-form-label">Año</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="anio"
-                  placeholder="Ej: 2023"
-                />
+                <input type="number" class="form-control" id="anio" placeholder="Ej: 2023">
               </div>
               <div class="mb-3">
-                <label class="col-form-label"
-                  >Duración <small class="text-muted">(minutos)</small></label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="duracion"
-                  placeholder="Ej: 93 min"
-                />
+                <label class="col-form-label">Duración</label>
+                <input type="text" class="form-control" id="duracion" placeholder="Ej: 93 min">
               </div>
               <div class="mb-3">
                 <label class="col-form-label">País</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="pais"
-                  placeholder="Ej: Argentina"
-                />
+                <input type="text" class="form-control" id="pais" minlength="4" placeholder="Ej: Argentina">
               </div>
               <div class="mb-3">
-                <label class="col-form-label"
-                  >Reparto
-                  <small class="text-muted text-sm"
-                    >(Cada actor separado por coma)</small
-                  ></label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="reparto"
-                  placeholder="Ej: Chris Pratt, Anya Taylor-Joy, Charlie Day, Jack Black"
-                />
+                <label class="col-form-label">Reparto <span class="text-muted text-sm">(Cada actor separado por ,)</span></label>
+                <input type="text" class="form-control" id="reparto" placeholder="Ej: Chris Pratt, Anya Taylor-Joy, Charlie Day, Jack Black">
               </div>
               <div class="justify-content-start">
                 <button type="submit" class="btn btn-primary">Enviar</button>
               </div>
-              <div
-                class="alert alert-danger mt-3 d-none"
-                role="alert"
-                id="msjFormulario"
-              ></div>
+              <div class="alert alert-danger mt-3 d-none" role="alert" id="msjFormulario">
+                
+              </div>
             </form>
           </div>
         </div>
       </article>
     </section>
-  </main>
-  <footer class="bg-dark text-light text-center py-4">
-    <p>&copy; Todos los derechos reservados</p>
-  </footer>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
-  <script src="../js/app.js"></script>
-  <script src="../js/admin.js" type="module"></script>
-</body>
+    </main>
+    <footer class="bg-dark text-light text-center py-4">
+        <p>&copy;Todos los derechos reservados</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="..//js/administrardor.js" type="module"></script>
+  </body>
 </html>
