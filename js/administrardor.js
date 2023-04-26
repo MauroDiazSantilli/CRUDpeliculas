@@ -65,12 +65,12 @@ function crearFila(pelicula, indice){
 }
 
 let spanCaracter = document.getElementById('contadorcaracter');
-const maximoCaracter = 500;
+const maximoCaracter = 800;
 
 const contarCaracteres = () => {
     let cantidadCaracteres = descripcion.value.length;
     let contar = maximoCaracter - cantidadCaracteres;
-    spanCaracter.textContent = contar + "/500"
+    spanCaracter.textContent = contar + "/800"
 }
 descripcion.addEventListener('keydown',contarCaracteres)
 
